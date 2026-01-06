@@ -1,7 +1,7 @@
-
 import { MetadataRoute } from 'next';
 import { brands, districts, services } from '@/lib/data';
 
+export const dynamic = 'force-static';
 const BASE_URL = 'https://endustriyelbuzdolabitamircisi.com';
 
 // Slugify helper (duplicated from page for simplicity in this file scope)
