@@ -314,6 +314,64 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trust Stats Section */}
+      <section className="py-12 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { label: "Yıllık Deneyim", value: "15+", sub: "Sektör Tecrübesi" },
+              { label: "Mutlu Müşteri", value: "10K+", sub: "İstanbul Genelinde" },
+              { label: "Uzman Tekniker", value: "24", sub: "Mobil Ekip" },
+              { label: "Onarım Garantisi", value: "1 Yıl", sub: "Resmi Garanti" }
+            ].map((stat, i) => (
+              <div key={i} className="text-center border-r border-slate-800 last:border-0">
+                <div className="text-4xl font-bold text-white mb-2 tracking-tight">{stat.value}</div>
+                <div className="text-primary-500 font-bold text-sm uppercase tracking-wider mb-1">{stat.label}</div>
+                <div className="text-slate-500 text-xs">{stat.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Process Section */}
+      <section className="py-24 bg-slate-50 relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <span className="text-primary-600 font-bold tracking-wider uppercase text-sm mb-2 block">Çalışma Sistemimiz</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-display">Süreç Nasıl İlerliyor?</h2>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+              Arıza kaydınızdan cihaz teslimine kadar tüm süreç profesyonel ekiplerimizce takip edilir.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { step: "01", title: "Arıza Bildirimi", desc: "7/24 aktif hattımızdan veya WhatsApp üzerinden bize ulaşırsınız.", icon: Phone },
+              { step: "02", title: "Hızlı Teşhis", desc: "En yakın mobil ekibimiz 2 saat içinde adresinize gelip arızayı tespit eder.", icon: MapPin },
+              { step: "03", title: "Yerinde Onarım", desc: "Onayınızla birlikte orijinal yedek parça kullanarak onarımı gerçekleştiriyoruz.", icon: Cog },
+              { step: "04", title: "Garanti Belgesi", desc: "İşlem sonrası 1 yıl geçerli resmi garanti belgenizi teslim ediyoruz.", icon: CheckCircle2 }
+            ].map((item, i) => (
+              <div key={i} className="relative group">
+                <div className="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100 h-full hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+                  <div className="text-6xl font-black text-slate-100 group-hover:text-primary-50 transition-colors absolute top-4 right-8">{item.step}</div>
+                  <div className="w-16 h-16 bg-primary-50 rounded-2xl flex items-center justify-center mb-6 text-primary-600 group-hover:bg-primary-600 group-hover:text-white transition-all duration-300">
+                    <item.icon className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">{item.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+                {i < 3 && (
+                  <div className="hidden lg:block absolute top-1/2 -right-4 translate-x-1/2 -translate-y-1/2 z-10">
+                    <ArrowRight className="h-6 w-6 text-slate-300" />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section with JSON-LD */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4">
