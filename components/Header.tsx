@@ -2,7 +2,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Phone, Menu, MapPin, Clock, X, ChevronRight, Mail, ChevronDown } from 'lucide-react';
+import { Phone, Menu, MapPin, Clock, X, ChevronRight, Mail, ChevronDown, Snowflake } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { services, brands } from '@/lib/data';
@@ -73,8 +73,8 @@ export default function Header() {
             >
                 <div className="container mx-auto px-4 flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-2 group shrink-0">
-                        <div className="bg-gradient-to-br from-primary-600 to-primary-700 p-2.5 rounded-xl shadow-lg shadow-primary-600/20 group-hover:scale-105 transition-transform duration-300">
-                            <MapPin className="h-6 w-6 text-white" />
+                        <div className="bg-gradient-to-br from-primary-600 to-primary-700 p-2.5 rounded-xl shadow-lg shadow-primary-600/20 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                            <Snowflake className="h-6 w-6 text-white" />
                         </div>
                         <div className="flex flex-col">
                             <span className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight leading-none">

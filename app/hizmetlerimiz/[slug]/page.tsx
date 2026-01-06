@@ -1,8 +1,8 @@
 
-import { services } from '@/lib/data';
+import { services, commonFaults } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { Phone, CheckCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+import { Phone, CheckCircle, AlertTriangle, ArrowRight, Snowflake, Zap, Volume2, Thermometer, DoorClosed, Flame, Wind } from 'lucide-react';
 import type { Metadata } from 'next';
 
 
@@ -118,19 +118,54 @@ export default async function ServicePage({ params }: Props) {
                             </div>
                         </div>
 
-                        {/* Common Issues Grid */}
+                        {/* Improved Common Issues Grid */}
                         <div className="bg-white rounded-2xl p-8 md:p-10 shadow-lg border border-slate-100">
-                            <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-                                <span className="bg-accent-100 p-2 rounded-lg"><AlertTriangle className="h-6 w-6 text-accent-600" /></span>
-                                Sık Karşılaşılan Arızalar
-                            </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {['Soğutmama Problemi', 'Kompresör (Motor) Arızası', 'Fan Motoru Değişimi', 'Termostat & Sensör Hatası', 'Gaz Kaçağı Tespiti', 'Su Akıtma Sorunu', 'Kapı Contası Yırtığı', 'Elektronik Kart Arızası'].map((item, i) => (
-                                    <div key={i} className="flex items-center gap-3 p-4 bg-slate-50 rounded-xl hover:bg-primary-50 transition-colors group">
-                                        <div className="h-2 w-2 rounded-full bg-slate-300 group-hover:bg-primary-500 transition-colors"></div>
-                                        <span className="font-medium text-slate-700 group-hover:text-primary-700">{item}</span>
-                                    </div>
-                                ))}
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+                                <h2 className="text-2xl font-bold text-slate-900 flex items-center gap-3">
+                                    <span className="bg-accent-100 p-2 rounded-lg"><AlertTriangle className="h-6 w-6 text-accent-600" /></span>
+                                    Sık Karşılaşılan Arızalar
+                                </h2>
+                                <span className="text-sm font-bold text-primary-600 bg-primary-50 px-4 py-1.5 rounded-full">
+                                    Tüm Markalar İçin Geçerlidir
+                                </span>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {commonFaults.map((category, idx) => {
+                                    const IconComponent = category.icon === 'Snowflake' ? Snowflake :
+                                        category.icon === 'Zap' ? Zap :
+                                            category.icon === 'Volume2' ? Volume2 :
+                                                category.icon === 'Thermometer' ? Thermometer :
+                                                    category.icon === 'DoorClosed' ? DoorClosed :
+                                                        category.icon === 'Flame' ? Flame :
+                                                            category.icon === 'Wind' ? Wind : AlertTriangle;
+
+                                    return (
+                                        <div key={idx} className="group border border-slate-100 rounded-2xl p-6 hover:border-primary-200 hover:shadow-md transition-all duration-300">
+                                            <div className="flex items-center gap-3 mb-4">
+                                                <div className="p-2 bg-slate-50 rounded-lg group-hover:bg-primary-50 transition-colors">
+                                                    <IconComponent className="h-5 w-5 text-slate-400 group-hover:text-primary-600 transition-colors" />
+                                                </div>
+                                                <h3 className="font-bold text-slate-800">{category.category}</h3>
+                                            </div>
+                                            <ul className="space-y-2">
+                                                {category.keywords.map((kw, i) => (
+                                                    <li key={i} className="flex items-start gap-2 text-sm text-slate-500 group-hover:text-slate-600">
+                                                        <div className="h-1.5 w-1.5 rounded-full bg-slate-200 group-hover:bg-primary-500 mt-1.5 shrink-0"></div>
+                                                        <span className="capitalize-first">{kw}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+
+                            <div className="mt-8 bg-slate-900 rounded-2xl p-6 text-white text-center">
+                                <p className="mb-4 font-medium italic">"Eğer yukarıdaki sorunlardan birini yaşıyorsanız, cihazınızı fişten çekip hemen bizi arayın. Daha büyük arızaların önüne geçmek için profesyonel destek şarttır."</p>
+                                <a href="tel:05369319667" className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-500 text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg hover:shadow-primary-500/25">
+                                    <Phone className="h-5 w-5" /> Acil Servis: 0536 931 96 67
+                                </a>
                             </div>
                         </div>
 
@@ -185,7 +220,7 @@ export default async function ServicePage({ params }: Props) {
                         <div className="bg-white rounded-2xl shadow-lg border border-slate-100 p-6">
                             <h3 className="font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">Diğer Hizmetlerimiz</h3>
                             <ul className="space-y-2">
-                                {services.filter(s => s.slug !== params.slug).slice(0, 6).map(s => (
+                                {services.filter(s => s.slug !== slug).slice(0, 6).map(s => (
                                     <li key={s.slug}>
                                         <Link href={`/hizmetlerimiz/${s.slug}`} className="flex items-center justify-between p-2 rounded-lg hover:bg-slate-50 text-slate-600 hover:text-primary-600 transition-colors text-sm group">
                                             {s.title}
@@ -201,6 +236,25 @@ export default async function ServicePage({ params }: Props) {
                     </div>
                 </div>
             </div>
+
+            {/* JSON-LD for Service-specific FAQ */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": commonFaults.map(fault => ({
+                            "@type": "Question",
+                            "name": `${service.title} - ${fault.category} Nelerdir?`,
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": `${service.title} için ${fault.category} arasında şunlar yer alır: ${fault.keywords.join(", ")}. Bu tür sorunlarda 0536 931 96 67 numaralı hattımızdan 7/24 teknik destek alabilirsiniz.`
+                            }
+                        }))
+                    })
+                }}
+            />
 
             {/* Bottom CTA Bar */}
             <div className="bg-gradient-to-r from-primary-900 to-slate-900 py-12">

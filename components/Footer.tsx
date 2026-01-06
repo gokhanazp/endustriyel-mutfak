@@ -1,6 +1,6 @@
 
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Snowflake } from 'lucide-react';
 
 export default function Footer() {
     return (
@@ -11,8 +11,8 @@ export default function Footer() {
                     {/* Company Info */}
                     <div>
                         <div className="flex items-center gap-2 mb-6">
-                            <div className="bg-primary-500 p-2 rounded-lg">
-                                <MapPin className="h-6 w-6 text-white" />
+                            <div className="bg-primary-500 p-2 rounded-lg group-hover:rotate-12 transition-transform">
+                                <Snowflake className="h-6 w-6 text-white" />
                             </div>
                             <span className="text-2xl font-bold text-white tracking-tight">
                                 Endüstriyel<span className="text-primary-500">Servis</span>

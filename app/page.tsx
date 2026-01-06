@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
-import { services, brands } from '@/lib/data';
-import { ArrowRight, Cog, PenTool, CheckCircle2, ChevronRight, Phone, MapPin, Snowflake } from 'lucide-react';
+import { services, brands, commonFaults } from '@/lib/data';
+import { ArrowRight, Cog, PenTool, CheckCircle2, ChevronRight, Phone, MapPin, Snowflake, Zap, Volume2, Thermometer, DoorClosed, Flame, Wind, AlertTriangle } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -137,44 +137,100 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Link href={`/hizmetlerimiz/${service.slug}`} key={index} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-primary-200 block h-full">
-                {/* Service Image Thumbnail */}
-                <div className="relative h-48 overflow-hidden">
+              <Link href={`/hizmetlerimiz/${service.slug}`} key={index} className="group bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-primary-900/10 transition-all duration-500 border border-slate-100 hover:border-primary-500/30 block h-full">
+                {/* Impactful Image Area */}
+                <div className="relative h-56 overflow-hidden">
                   {service.image ? (
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   ) : (
-                    <div className="w-full h-full bg-slate-200"></div>
+                    <div className="w-full h-full bg-slate-100"></div>
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-60"></div>
-                  <div className="absolute bottom-4 left-6">
-                    <div className="bg-primary-600 p-2 rounded-lg shadow-lg">
-                      {index % 3 === 0 ? <Snowflake className="h-5 w-5 text-white" /> :
-                        index % 3 === 1 ? <Cog className="h-5 w-5 text-white" /> :
-                          <PenTool className="h-5 w-5 text-white" />}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+
+                  {/* Floating Icon */}
+                  <div className="absolute bottom-6 left-6">
+                    <div className="bg-primary-600 p-3 rounded-2xl shadow-xl text-white transform -rotate-6 group-hover:rotate-0 transition-transform duration-500">
+                      {index % 3 === 0 ? <Snowflake className="h-6 w-6" /> :
+                        index % 3 === 1 ? <Cog className="h-6 w-6" /> :
+                          <PenTool className="h-6 w-6" />}
                     </div>
                   </div>
                 </div>
 
-                <div className="p-8">
-                  <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-primary-600 transition-colors leading-tight">
+                <div className="p-10">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-primary-600 transition-colors leading-tight">
                     {service.title}
                   </h3>
 
-                  <p className="text-slate-500 mb-6 line-clamp-2 leading-relaxed h-12">
+                  <p className="text-slate-600 mb-8 leading-relaxed line-clamp-2">
                     {service.shortDesc}
                   </p>
 
-                  <div className="pt-6 border-t border-slate-50 flex items-center justify-between text-sm font-bold text-slate-900 group-hover:text-primary-600 transition-colors">
-                    <span>Hizmet Detayı</span>
-                    <ChevronRight className="h-5 w-5 bg-slate-100 rounded-full p-0.5 group-hover:bg-primary-600 group-hover:text-white transition-all" />
+                  <div className="flex items-center gap-3 text-sm font-bold text-slate-900 group-hover:text-primary-600 transition-colors">
+                    <span className="bg-slate-100 group-hover:bg-primary-50 px-4 py-2 rounded-full transition-colors">Hizmeti İncele</span>
+                    <div className="h-10 w-10 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-primary-600 group-hover:border-primary-600 group-hover:text-white transition-all">
+                      <ChevronRight className="h-5 w-5" />
+                    </div>
                   </div>
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Common Problems Section - SEO IMPACT */}
+      <section className="py-24 bg-white border-y border-slate-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 underline-decoration">
+            <span className="text-primary-600 font-bold tracking-wider uppercase text-sm mb-2 block">Çözüm Sunduğumuz Sorunlar</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Sık Karşılaşılan Buzdolabı Arızaları</h2>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+              İşletmenizdeki endüstriyel soğutma cihazlarında en sık karşılaşılan sorunlar and profesyonel çözüm yollarımız.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {commonFaults.slice(0, 4).map((category, idx) => {
+              const IconComponent = category.icon === 'Snowflake' ? Snowflake :
+                category.icon === 'Zap' ? Zap :
+                  category.icon === 'Volume2' ? Volume2 :
+                    category.icon === 'Thermometer' ? Thermometer :
+                      category.icon === 'DoorClosed' ? DoorClosed :
+                        category.icon === 'Flame' ? Flame :
+                          category.icon === 'Wind' ? Wind : AlertTriangle;
+
+              return (
+                <div key={idx} className="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-primary-200 hover:bg-white hover:shadow-xl transition-all duration-500 group">
+                  <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm group-hover:bg-primary-600 group-hover:text-white transition-all mb-6">
+                    <IconComponent className="h-7 w-7" />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-4 tracking-tight">{category.category}</h3>
+                  <ul className="space-y-3">
+                    {category.keywords.slice(0, 3).map((kw, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-slate-500 group-hover:text-slate-600">
+                        <div className="h-1.5 w-1.5 rounded-full bg-slate-300 group-hover:bg-primary-500 mt-1.5 shrink-0"></div>
+                        <span>{kw}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-slate-500 mb-6 italic text-sm">
+              * Listelenenler en sık karşılaşılan temel arızalardır. Her türlü teknik sorun için 7/24 destek alabilirsiniz.
+            </p>
+            <Link href="/hizmetlerimiz" className="inline-flex items-center gap-2 font-bold text-primary-600 hover:text-primary-700 transition-colors group">
+              Tüm Arıza Türlerini Gör
+              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>

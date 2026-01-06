@@ -202,6 +202,85 @@ export const blogPosts = [
     }
 ];
 
+export const commonFaults = [
+    {
+        category: "Soğutma Problemleri",
+        icon: "Snowflake",
+        keywords: [
+            "endüstriyel buzdolabı soğutmuyor",
+            "endüstriyel dolap az soğutuyor",
+            "buzdolabı soğuk tutmuyor",
+            "endüstriyel buzdolabı donma yapıyor",
+            "dolap aşırı soğutuyor"
+        ]
+    },
+    {
+        category: "Elektrik & Çalışmama Sorunları",
+        icon: "Zap",
+        keywords: [
+            "endüstriyel buzdolabı çalışmıyor",
+            "buzdolabı hiç açılmıyor",
+            "dolap sigorta attırıyor",
+            "fişe takılı ama çalışmıyor",
+            "dolap durup durup çalışıyor"
+        ]
+    },
+    {
+        category: "Ses & Titreşim Şikayetleri",
+        icon: "Volume2",
+        keywords: [
+            "endüstriyel buzdolabı çok ses yapıyor",
+            "dolap titreşimli çalışıyor",
+            "buzdolabından tıkırtı sesi geliyor",
+            "motor anormal ses çıkarıyor"
+        ]
+    },
+    {
+        category: "Termostat & Sensör Arızaları",
+        icon: "Thermometer",
+        keywords: [
+            "endüstriyel buzdolabı ısı ayarı tutmuyor",
+            "termostat bozuk",
+            "dijital ekran hata veriyor",
+            "sıcaklık sürekli değişiyor",
+            "derece sabitlenmiyor"
+        ]
+    },
+    {
+        category: "Kapı, Conta & Fiziksel Sorunlar",
+        icon: "DoorClosed",
+        keywords: [
+            "buzdolabı kapısı kapanmıyor",
+            "conta hava kaçırıyor",
+            "dolap terleme yapıyor",
+            "içerde su birikiyor",
+            "altından su akıtıyor"
+        ]
+    },
+    {
+        category: "Motor – Kompresör Problemleri",
+        icon: "Flame",
+        keywords: [
+            "endüstriyel buzdolabı motoru çalışmıyor",
+            "motor ısınma yapıyor",
+            "kompresör devreye girmiyor",
+            "dolap sürekli çalışıyor durmuyor",
+            "gaz eksilmiş olabilir mi"
+        ]
+    },
+    {
+        category: "Fan – Evaporatör – Gaz Problemleri",
+        icon: "Wind",
+        keywords: [
+            "fan dönmüyor",
+            "fan ses yapıyor",
+            "evaporatör buz tutuyor",
+            "gaz bitmiş",
+            "gaz kaçağı var mı"
+        ]
+    }
+];
+
 export const SEO_CONFIG = {
     phone: "0536 931 96 67", // Placeholder, user can update
     siteName: "Endüstriyel Buzdolabı Tamircisi",
