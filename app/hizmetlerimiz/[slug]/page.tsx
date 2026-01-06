@@ -40,10 +40,21 @@ export default async function ServicePage({ params }: Props) {
         <div className="min-h-screen bg-slate-50">
             {/* Professional Hero Section */}
             <div className="relative bg-slate-900 border-b border-primary-900/50 py-24 overflow-hidden">
-                <div className="absolute inset-0 opacity-20 bg-[url('/grid.svg')]"></div>
+                {/* Background Image */}
+                {service.image && (
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src={service.image}
+                            alt={service.title}
+                            className="w-full h-full object-cover opacity-30"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/60 to-slate-900"></div>
+                    </div>
+                )}
+                <div className="absolute inset-0 opacity-20 bg-[url('/grid.svg')] z-0"></div>
                 {/* Gradient Orbs */}
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-600/20 rounded-full blur-3xl -mr-32 -mt-32"></div>
-                <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-accent-500/10 rounded-full blur-3xl -ml-16 -mb-16"></div>
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-600/20 rounded-full blur-3xl -mr-32 -mt-32 z-0"></div>
+                <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-accent-500/10 rounded-full blur-3xl -ml-16 -mb-16 z-0"></div>
 
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-12">

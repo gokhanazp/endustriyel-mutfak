@@ -138,28 +138,38 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Link href={`/hizmetlerimiz/${service.slug}`} key={index} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-primary-200 block h-full">
-                <div className="p-8 h-full flex flex-col">
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="bg-primary-50 group-hover:bg-primary-600 p-4 rounded-xl transition-colors duration-300">
-                      {index % 3 === 0 ? <Snowflake className="h-8 w-8 text-primary-600 group-hover:text-white" /> :
-                        index % 3 === 1 ? <Cog className="h-8 w-8 text-primary-600 group-hover:text-white" /> :
-                          <PenTool className="h-8 w-8 text-primary-600 group-hover:text-white" />}
-                    </div>
-                    <div className="bg-slate-50 px-3 py-1 rounded text-xs font-bold text-slate-500 group-hover:bg-primary-50 group-hover:text-primary-600 transition-colors">
-                      Hizmet #{index + 1}
+                {/* Service Image Thumbnail */}
+                <div className="relative h-48 overflow-hidden">
+                  {service.image ? (
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-slate-200"></div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-60"></div>
+                  <div className="absolute bottom-4 left-6">
+                    <div className="bg-primary-600 p-2 rounded-lg shadow-lg">
+                      {index % 3 === 0 ? <Snowflake className="h-5 w-5 text-white" /> :
+                        index % 3 === 1 ? <Cog className="h-5 w-5 text-white" /> :
+                          <PenTool className="h-5 w-5 text-white" />}
                     </div>
                   </div>
+                </div>
 
+                <div className="p-8">
                   <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-primary-600 transition-colors leading-tight">
                     {service.title}
                   </h3>
 
-                  <p className="text-slate-500 mb-6 flex-grow leading-relaxed">
+                  <p className="text-slate-500 mb-6 line-clamp-2 leading-relaxed h-12">
                     {service.shortDesc}
                   </p>
 
-                  <div className="pt-6 border-t border-slate-50 flex items-center justify-between text-sm font-bold text-slate-900 group-hover:text-primary-600 transition-colors mt-auto">
-                    <span>Hemen İncele</span>
+                  <div className="pt-6 border-t border-slate-50 flex items-center justify-between text-sm font-bold text-slate-900 group-hover:text-primary-600 transition-colors">
+                    <span>Hizmet Detayı</span>
                     <ChevronRight className="h-5 w-5 bg-slate-100 rounded-full p-0.5 group-hover:bg-primary-600 group-hover:text-white transition-all" />
                   </div>
                 </div>

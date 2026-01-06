@@ -20,78 +20,91 @@ export const services = [
     {
         title: "Endüstriyel Mutfak Servisi",
         slug: "endustriyel-mutfak-servisi",
+        image: "/hizmetlerimiz/endustriyel-mutfak.jpeg",
         shortDesc: "Profesyonel endüstriyel mutfak ekipmanları tamir ve bakım hizmeti.",
         content: "Endüstriyel mutfaklarınızda yaşanan her türlü arıza için uzman ekibimizle yanınızdayız. Fırınlardan ocaklara, hazırlık ekipmanlarından pişirme gruplarına kadar geniş bir yelpazede hizmet veriyoruz."
     },
     {
         title: "Endüstriyel Buzdolabı Servisi",
         slug: "endustriyel-buzdolabi-servisi",
+        image: "/hizmetlerimiz/endustriyel-dolap-dik.jpeg",
         shortDesc: "Ticari ve sanayi tipi buzdolapları için 7/24 teknik servis.",
         content: "İşletmenizin kalbi olan endüstriyel buzdolaplarınızın soğutma performansını maksimize ediyoruz. Gaz basımı, motor değişimi ve termostat arızalarında kesin çözüm sunuyoruz."
     },
     {
         title: "Sanayi Tip Buzdolabı Servisi",
         slug: "sanayi-tip-buzdolabi-servisi",
+        image: "/hizmetlerimiz/endustriyel-dolap-dik.jpeg",
         shortDesc: "Sanayi tipi dolaplarınız için yerinde onarım ve orijinal yedek parça.",
         content: "Sanayi tipi buzdolapları yoğun kullanım nedeniyle düzenli bakım gerektirir. Arıza durumunda acil müdahale ekibimizle stoklarınız bozulmadan yanınızdayız."
     },
     {
         title: "Tezgah Altı Buzdolabı Servisi",
         slug: "tezgah-alti-buzdolabi-servisi",
+        image: "/hizmetlerimiz/tezgah-tip-dolap.jpeg",
         shortDesc: "Yer tasarruflu tezgah altı dolaplarınız için uzman tamir desteği.",
         content: "Mutfak operasyonunuzun hızını kesmeyen, tezgah altı soğutucularınız için hızlı ve garantili servis hizmeti. Fan motoru, kapı contası ve soğutma sorunlarına anında çözüm."
     },
     {
         title: "Tezgah Tip Buzdolabı Servisi",
         slug: "tezgah-tip-buzdolabi-servisi",
-        shortDesc: "Tezgah tipi soğutucular için kapsamlı bakım ve onarım.",
+        image: "/hizmetlerimiz/tezgah-tip-dolap.jpeg",
+        shortDesc: "Tezgah tipi soğutucular için kapsamlı bakım and onarım.",
         content: "Hazırlık ünitelerinizin ve tezgah tipi dolaplarınızın verimli çalışması için profesyonel destek. Su akıtma, buzlanma ve soğutmama şikayetlerinize son veriyoruz."
     },
     {
         title: "Dik Tip Buzdolabı Servisi",
         slug: "dik-tip-buzdolabi-servisi",
+        image: "/hizmetlerimiz/endustriyel-dolap-dik.jpeg",
         shortDesc: "Dik tip endüstriyel dolaplarınız için garantili teknik servis.",
         content: "Depolama kapasitenizin en önemli parçası olan dik tip dolaplarda yaşanacak kompresör ve elektronik kart arızalarını, orijinal parçalarla gideriyoruz."
     },
     {
         title: "Pastane Buzdolabı Servisi",
         slug: "pastane-buzdolabi-servisi",
+        image: "/hizmetlerimiz/pasta-dolabi.jpeg",
         shortDesc: "Hassas ürünlerinizi koruyan pastane dolapları için özel servis.",
         content: "Pastalarınızın ve tatlılarınızın tazeliğini koruması kritik öneme sahiptir. Nem dengesi ve sıcaklık kontrolü gerektiren pastane dolaplarında uzmanlaşmış ekibimizle hizmetinizdeyiz."
     },
     {
         title: "Market Dolabı Servisi",
         slug: "market-dolabi-servisi",
+        image: "/hizmetlerimiz/market-dolabi.jpeg",
         shortDesc: "Sütlük ve şarküteri dolaplarınız için kesintisiz servis hizmeti.",
         content: "Market reyonlarınızın soğuk zincirini koruyoruz. Açık cephe sütlük dolapları ve kapalı reyonlarda yaşanan performans kayıplarını hızla çözüyoruz."
     },
     {
         title: "Kebap Meze Dolabı Servisi",
         slug: "kebap-meze-dolabi-servisi",
+        image: "/hizmetlerimiz/meze-kebap-dolabi.jpeg",
         shortDesc: "Teşhir dolaplarınızın sunum kalitesini ve soğutmasını koruyoruz.",
         content: "Meze ve kebap dolaplarında görsellik kadar soğutma da önemlidir. Ürünlerinizin kurumaması ve bozulmaması için gerekli tüm teknik ayarları ve tamirleri yapıyoruz."
     },
     {
         title: "Şişe Kola İçecek Dolabı Servisi",
         slug: "sise-kola-icecek-dolabi-servisi",
+        image: "/hizmetlerimiz/sise.jpeg",
         shortDesc: "İçecek dolaplarınız için marka bağımsız tamir ve bakım.",
         content: "Yaz kış fark etmeksizin içeceklerinizi soğuk tutması gereken dolaplarınızın fan, motor ve aydınlatma arızalarını yerinde gideriyoruz."
     },
     {
         title: "Kasap Dolabı Servisi",
         slug: "kasap-dolabi-servisi",
+        image: "/hizmetlerimiz/kasap-dolabi.jpeg",
         shortDesc: "Et ürünleri için kritik öneme sahip kasap dolaplarında hızlı servis.",
         content: "Etlerinizin rengini ve tazeliğini koruması için kasap dolaplarının kusursuz çalışması gerekir. Koku yapma, kararma gibi sorunların önüne geçen profesyonel bakım hizmeti sunuyoruz."
     },
     {
         title: "Cafe Dolabı Servisi",
         slug: "cafe-dolabi-servisi",
+        image: "/hizmetlerimiz/endustriyel-mutfak.jpeg",
         shortDesc: "Cafe ekipmanlarınız ve soğutucularınız için 7/24 acil destek.",
         content: "Cafelerdeki yoğun sirkülasyona dayalı arızalarda, barista dolaplarından teşhir ünitelerine kadar tüm soğutma gruplarına müdahale ediyoruz."
     },
     {
         title: "Soğuk Oda Servisi",
         slug: "soguk-oda-servisi",
+        image: "/hizmetlerimiz/soguk-oda.jpeg",
         shortDesc: "Soğuk hava depoları ve odaları için endüstriyel çözüm ortağınız.",
         content: "Büyük ölçekli depolama alanlarınız, soğuk hava depolarınız için periyodik bakım, motor değişimi ve panel yalıtım kontrolü hizmetleri."
     }
