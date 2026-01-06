@@ -152,7 +152,7 @@ export default async function ServicePage({ params }: Props) {
                                                 {category.keywords.map((kw, i) => (
                                                     <li key={i} className="flex items-start gap-2 text-sm text-slate-500 group-hover:text-slate-600">
                                                         <div className="h-1.5 w-1.5 rounded-full bg-slate-200 group-hover:bg-primary-500 mt-1.5 shrink-0"></div>
-                                                        <span className="capitalize-first">{kw}</span>
+                                                        <span>{kw}</span>
                                                     </li>
                                                 ))}
                                             </ul>

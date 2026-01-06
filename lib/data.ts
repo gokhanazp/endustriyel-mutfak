@@ -178,6 +178,44 @@ export const blogPosts = [
         `
     },
     {
+        title: "Endüstriyel Buzdolabı Arıza Rehberi: En Sık Karşılaşılan 7 Problem",
+        slug: "endustriyel-buzdolabi-ariza-rehberi",
+        excerpt: "Endüstriyel buzdolabınızda sorun mu var? Soğutma problemlerinden motor arızalarına kadar en sık karşılaşılan 7 sorunu ve çözümlerini keşfedin.",
+        date: "06 Ocak 2024",
+        readTime: "6 dk",
+        image: "/blog/buzdolabi-tamiri.jpg",
+        content: `
+            <h3>Endüstriyel Buzdolabı Arızaları ve Çözüm Yolları</h3>
+            <p>Endüstriyel mutfaklarda en çok karşılaşılan sorunların başında soğutma grubu arızaları gelir. Bir saniyelik bir duruş bile binlerce liralık ürün kaybına neden olabilir. İşte işletmenizde bilmeniz gereken en kritik arıza türleri:</p>
+
+            <h4>1. Soğutma Problemleri (Kritik)</h4>
+            <p>Buzdolabının az soğutması veya hiç soğutmaması genellikle gaz kaçaklarından, kirlenmiş kondanserlerden veya termostat hatalarından kaynaklanır. Eğer dijital ekranda yüksek ısı uyarısı görüyorsanız, cihazı mutlaka kontrol ettirmelisiniz.</p>
+
+            <h4>2. Elektrik ve Çalışmama Sorunları</h4>
+            <p>Dolabın sigorta attırması veya fişe takılı olduğu halde tepki vermemesi, elektrik tesisatındaki veya ana karttaki bir kısa devrenin habercisi olabilir. Bu durumda cihazı zorlamadan fişten çekmek en güvenli yoldur.</p>
+
+            <h4>3. Ses ve Titreşim Şikayetleri</h4>
+            <p>Normalden fazla gelen tıkırtı veya vınlama sesleri, genellikle fan motorunun veya kompresör ayaklarının gevşemesinden kaynaklanır. Zamanında müdahale edilmezse motorun yanmasına yol açabilir.</p>
+
+            <h4>4. Termostat ve Sensör Hataları</h4>
+            <p>Derecenin sürekli değişmesi veya sabitlenmemesi, cihazın beyin kısmındaki sensörlerin bozulduğunu gösterir. Hassas ürün saklayan işletmeler için bu durum en riskli arıza türüdür.</p>
+
+            <h4>5. Kapı ve Conta Problemleri</h4>
+            <p>Fitillerin (contaların) hava kaçırması, içeri giren sıcak hava nedeniyle cihazın %50 daha fazla çalışmasına ve faturanızın iki katına çıkmasına neden olur. Terleme yapması da bu sorunun belirtisidir.</p>
+
+            <h4>6. Motor (Kompresör) Arızaları</h4>
+            <p>Cihazın kalbi olan motorun aşırı ısınması veya devreye girmemesi "Acil Servis" gerektiren bir durumdur. Kompresör değişimi maliyetli olsa da, uzman ellerde yapıldığında cihazınızın ömrüne ömür katar.</p>
+
+            <h4>7. Fan ve Gaz Sorunları</h4>
+            <p>Gaz bitmesi veya fan motorunun dönmemesi sistemin kilitlenmesine neden olur. Evaporatörün buz tutması durumunda gaz akışının kesildiğinden şüphelenilmelidir.</p>
+
+            <div class="bg-amber-50 p-6 rounded-2xl border-l-4 border-amber-500 my-8">
+                <p class="text-amber-900 font-bold mb-2">Uzman Tavsiyesi:</p>
+                <p class="text-amber-800 italic text-sm">"Endüstriyel cihazlar karmaşık sistemlerdir. Ev tipi dolapların aksine, yanlış müdahale sistemi tamamen kullanılmaz hale getirebilir. Arıza durumunda <strong>0536 931 96 67</strong> hattımızdan bize ulaşarak yerinde destek alabilirsiniz."</p>
+            </div>
+        `
+    },
+    {
         title: "Endüstriyel Mutfak Kurulumunda Dikkat Edilmesi Gerekenler",
         slug: "endustriyel-mutfak-kurulum-rehberi",
         excerpt: "Yeni bir mutfak kurarken veya yenilerken yapılan hatalar işletme verimliliğini düşürür. Doğru proje ve kurulum rehberi.",
@@ -207,76 +245,76 @@ export const commonFaults = [
         category: "Soğutma Problemleri",
         icon: "Snowflake",
         keywords: [
-            "endüstriyel buzdolabı soğutmuyor",
-            "endüstriyel dolap az soğutuyor",
-            "buzdolabı soğuk tutmuyor",
-            "endüstriyel buzdolabı donma yapıyor",
-            "dolap aşırı soğutuyor"
+            "Endüstriyel buzdolabı soğutmuyor",
+            "Endüstriyel dolap az soğutuyor",
+            "Buzdolabı soğuk tutmuyor",
+            "Endüstriyel buzdolabı donma yapıyor",
+            "Dolap aşırı soğutuyor"
         ]
     },
     {
         category: "Elektrik & Çalışmama Sorunları",
         icon: "Zap",
         keywords: [
-            "endüstriyel buzdolabı çalışmıyor",
-            "buzdolabı hiç açılmıyor",
-            "dolap sigorta attırıyor",
-            "fişe takılı ama çalışmıyor",
-            "dolap durup durup çalışıyor"
+            "Endüstriyel buzdolabı çalışmıyor",
+            "Buzdolabı hiç açılmıyor",
+            "Dolap sigorta attırıyor",
+            "Fişe takılı ama çalışmıyor",
+            "Dolap durup durup çalışıyor"
         ]
     },
     {
         category: "Ses & Titreşim Şikayetleri",
         icon: "Volume2",
         keywords: [
-            "endüstriyel buzdolabı çok ses yapıyor",
-            "dolap titreşimli çalışıyor",
-            "buzdolabından tıkırtı sesi geliyor",
-            "motor anormal ses çıkarıyor"
+            "Endüstriyel buzdolabı çok ses yapıyor",
+            "Dolap titreşimli çalışıyor",
+            "Buzdolabından tıkırtı sesi geliyor",
+            "Motor anormal ses çıkarıyor"
         ]
     },
     {
         category: "Termostat & Sensör Arızaları",
         icon: "Thermometer",
         keywords: [
-            "endüstriyel buzdolabı ısı ayarı tutmuyor",
-            "termostat bozuk",
-            "dijital ekran hata veriyor",
-            "sıcaklık sürekli değişiyor",
-            "derece sabitlenmiyor"
+            "Endüstriyel buzdolabı ısı ayarı tutmuyor",
+            "Termostat bozuk",
+            "Dijital ekran hata veriyor",
+            "Sıcaklık sürekli değişiyor",
+            "Derece sabitlenmiyor"
         ]
     },
     {
         category: "Kapı, Conta & Fiziksel Sorunlar",
         icon: "DoorClosed",
         keywords: [
-            "buzdolabı kapısı kapanmıyor",
-            "conta hava kaçırıyor",
-            "dolap terleme yapıyor",
-            "içerde su birikiyor",
-            "altından su akıtıyor"
+            "Buzdolabı kapısı kapanmıyor",
+            "Conta hava kaçırıyor",
+            "Dolap terleme yapıyor",
+            "İçerde su birikiyor",
+            "Altından su akıtıyor"
         ]
     },
     {
         category: "Motor – Kompresör Problemleri",
         icon: "Flame",
         keywords: [
-            "endüstriyel buzdolabı motoru çalışmıyor",
-            "motor ısınma yapıyor",
-            "kompresör devreye girmiyor",
-            "dolap sürekli çalışıyor durmuyor",
-            "gaz eksilmiş olabilir mi"
+            "Endüstriyel buzdolabı motoru çalışmıyor",
+            "Motor ısınma yapıyor",
+            "Kompresör devreye girmiyor",
+            "Dolap sürekli çalışıyor durmuyor",
+            "Gaz eksilmiş olabilir mi"
         ]
     },
     {
         category: "Fan – Evaporatör – Gaz Problemleri",
         icon: "Wind",
         keywords: [
-            "fan dönmüyor",
-            "fan ses yapıyor",
-            "evaporatör buz tutuyor",
-            "gaz bitmiş",
-            "gaz kaçağı var mı"
+            "Fan dönmüyor",
+            "Fan ses yapıyor",
+            "Evaporatör buz tutuyor",
+            "Gaz bitmiş",
+            "Gaz kaçağı var mı"
         ]
     }
 ];
