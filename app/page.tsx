@@ -1,65 +1,316 @@
-import Image from "next/image";
+
+import Link from 'next/link';
+import { services, brands } from '@/lib/data';
+import { ArrowRight, Cog, PenTool, CheckCircle2, ChevronRight, Phone, MapPin, Snowflake } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="flex flex-col min-h-screen">
+      {/* Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-900">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-900/60 z-10"></div>
+          <img
+            src="/hero-bg.png"
+            alt="Endüstriyel Mutfak Servisi"
+            className="w-full h-full object-cover opacity-60 scale-105 animate-pulse-slow"
+          />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="container relative z-20 px-4 pt-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/10 border border-primary-500/20 text-white mb-8 backdrop-blur-md">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-primary-500"></span>
+                </span>
+                <span className="font-bold tracking-wide text-sm">İstanbul'un En Kapsamlı Servis Ağı</span>
+              </div>
+
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 tracking-tight leading-[1.1]">
+                Profesyonel <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-sky-300 to-primary-400 bg-300% animate-gradient">Soğutma Çözümleri</span>
+              </h1>
+
+              <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed font-light border-l-2 border-primary-500 pl-6">
+                Endüstriyel mutfak ekipmanlarınız ve ticari buzdolaplarınız için <strong className="text-white">kesintisiz performans garantisi.</strong> 39 ilçede, 7/24 acil teknik servis ve orijinal yedek parça desteği.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="tel:05369319667" className="group px-8 py-4 bg-white text-slate-900 hover:bg-slate-100 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-3">
+                  <Phone className="h-5 w-5 text-primary-600 group-hover:scale-110 transition-transform" />
+                  Hemen Servis Çağır
+                </a>
+                <Link href="/markalar" className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/20 rounded-full font-bold text-lg transition-all backdrop-blur-sm flex items-center justify-center gap-3">
+                  Markalarımız
+                  <ArrowRight className="h-5 w-5 opacity-70" />
+                </Link>
+              </div>
+
+              <div className="mt-12 flex flex-wrap items-center gap-8 text-slate-400 text-sm font-medium">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary-500" />
+                  Aynı Gün Servis
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary-500" />
+                  1 Yıl Garanti
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-primary-500" />
+                  Kurumsal Fatura
+                </div>
+              </div>
+            </div>
+
+            {/* Right Floating Card */}
+            <div className="hidden lg:block relative">
+              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary-500 to-accent-500 opacity-30 blur-2xl"></div>
+              <div className="relative bg-slate-800/50 backdrop-blur-xl border border-white/10 p-8 rounded-2xl shadow-2xl">
+                <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/10">
+                  <div className="bg-primary-500/20 p-3 rounded-xl">
+                    <Cog className="h-8 w-8 text-primary-400 animate-spin-slow" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold text-xl">Teknik Servis Durumu</h3>
+                    <p className="text-primary-300 text-sm">Canlı Operasyon Merkezi</p>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-slate-400">Aktif Bölge Sayısı</span>
+                    <span className="text-white font-bold bg-white/5 px-2 py-1 rounded">39 İlçe</span>
+                  </div>
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-slate-400">Ortalama Varış Süresi</span>
+                    <span className="text-green-400 font-bold bg-green-400/10 px-2 py-1 rounded">~120 Dk</span>
+                  </div>
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-slate-400">Nöbetçi Ekip</span>
+                    <span className="text-white font-bold flex items-center gap-2"><div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div> Aktif</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* Modern Infinite Brand Slider (Marquee) - SLOWER SPEED */}
+      <section className="py-0 bg-white border-b border-slate-100 overflow-hidden">
+        <div className="py-12 relative">
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
+
+          <div className="flex w-max animate-scroll gap-16 items-center pause-on-hover">
+            {[...brands, ...brands, ...brands, ...brands].map((brand, i) => (
+              <Link href={`/markalar/${brand.slug}`} key={i} className="flex-shrink-0 opacity-60 hover:opacity-100 transition-all duration-300 cursor-pointer group grayscale hover:grayscale-0 relative h-24 w-48 flex items-center justify-center">
+                {brand.image ? (
+                  <img
+                    src={brand.image}
+                    alt={`${brand.display} Yetkili Servisi`}
+                    className="max-h-20 max-w-full object-contain"
+                  />
+                ) : (
+                  <span className="text-3xl font-black text-slate-800 tracking-tighter group-hover:text-primary-600 transition-colors">
+                    {brand.display.toUpperCase()}
+                  </span>
+                )}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Services Grid - CLEARER DESIGN */}
+      <section className="py-24 bg-slate-50 relative">
+        <div className="container mx-auto px-4 relative">
+          <div className="text-center mb-16">
+            <span className="text-primary-600 font-bold tracking-wider uppercase text-sm mb-2 block">Uzmanlık Alanlarımız</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Tamir ve Bakım Hizmetleri</h2>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+              İşletmenizdeki soğutma ekipmanları için profesyonel çözümler. Aşağıdaki hizmetlerden ihtiyacınız olanı seçin.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Link href={`/hizmetlerimiz/${service.slug}`} key={index} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-primary-200 block h-full">
+                <div className="p-8 h-full flex flex-col">
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="bg-primary-50 group-hover:bg-primary-600 p-4 rounded-xl transition-colors duration-300">
+                      {index % 3 === 0 ? <Snowflake className="h-8 w-8 text-primary-600 group-hover:text-white" /> :
+                        index % 3 === 1 ? <Cog className="h-8 w-8 text-primary-600 group-hover:text-white" /> :
+                          <PenTool className="h-8 w-8 text-primary-600 group-hover:text-white" />}
+                    </div>
+                    <div className="bg-slate-50 px-3 py-1 rounded text-xs font-bold text-slate-500 group-hover:bg-primary-50 group-hover:text-primary-600 transition-colors">
+                      Hizmet #{index + 1}
+                    </div>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-primary-600 transition-colors leading-tight">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-slate-500 mb-6 flex-grow leading-relaxed">
+                    {service.shortDesc}
+                  </p>
+
+                  <div className="pt-6 border-t border-slate-50 flex items-center justify-between text-sm font-bold text-slate-900 group-hover:text-primary-600 transition-colors mt-auto">
+                    <span>Hemen İncele</span>
+                    <ChevronRight className="h-5 w-5 bg-slate-100 rounded-full p-0.5 group-hover:bg-primary-600 group-hover:text-white transition-all" />
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* Coverage & Service Network Section */}
+      <section className="py-24 bg-white overflow-hidden relative">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="lg:w-1/2 relative">
+              <div className="absolute -inset-4 bg-primary-50 rounded-full blur-3xl opacity-60"></div>
+              <div className="relative bg-white border border-slate-100 p-8 rounded-3xl shadow-2xl">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="h-12 w-12 bg-primary-100 rounded-full flex items-center justify-center">
+                    <MapPin className="h-6 w-6 text-primary-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-slate-900 text-xl">İstanbul Servis Haritası</h3>
+                    <p className="text-sm text-slate-500">Canlı Ekipler</p>
+                  </div>
+                </div>
+                {/* Abstract Map Representation */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <h4 className="font-bold text-slate-800 mb-2">Avrupa Yakası</h4>
+                    <ul className="text-sm text-slate-600 space-y-2">
+                      {['Beşiktaş', 'Şişli', 'Beylikdüzü', 'Bakırköy'].map(d => (
+                        <li key={d} className="flex items-center gap-2">
+                          <div className="h-1.5 w-1.5 rounded-full bg-green-500"></div> {d}
+                        </li>
+                      ))}
+                      <li className="text-primary-600 font-medium text-xs">+21 İlçe Daha</li>
+                    </ul>
+                  </div>
+                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <h4 className="font-bold text-slate-800 mb-2">Anadolu Yakası</h4>
+                    <ul className="text-sm text-slate-600 space-y-2">
+                      {['Kadıköy', 'Ümraniye', 'Maltepe', 'Pendik'].map(d => (
+                        <li key={d} className="flex items-center gap-2">
+                          <div className="h-1.5 w-1.5 rounded-full bg-green-500"></div> {d}
+                        </li>
+                      ))}
+                      <li className="text-primary-600 font-medium text-xs">+14 İlçe Daha</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:w-1/2">
+              <span className="text-primary-600 font-bold tracking-wider uppercase text-sm mb-2 block">7/24 Kesintisiz Hizmet</span>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">En Yakın Teknik Servis Ekibimiz Sadece Bir Telefon Uzağınızda</h2>
+              <p className="text-slate-600 text-lg mb-8 leading-relaxed">
+                Endüstriyel cihaz arızaları zaman tanımaz. Bu yüzden İstanbul'un her iki yakasında, 39 ilçede konuşlanmış mobil ekiplerimizle çağrınıza en hızlı yanıtı veriyoruz.
+              </p>
+
+              <div className="space-y-4 mb-10">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-6 w-6 text-green-500 shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="font-bold text-slate-900">Maksimum 2 Saat Varış Süresi</h4>
+                    <p className="text-sm text-slate-500">Acil kayıtlarda bölgenizdeki en yakın ekip yönlendirilir.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-6 w-6 text-green-500 shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="font-bold text-slate-900">Tam Donanımlı Mobil Araçlar</h4>
+                    <p className="text-sm text-slate-500">Sık kullanılan yedek parçalar araç stoklarımızda mevcuttur.</p>
+                  </div>
+                </div>
+              </div>
+
+              <a href="tel:05369319667" className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-primary-600 transition-colors shadow-xl">
+                <Phone className="h-5 w-5" />
+                Hemen Servis Çağır
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section with JSON-LD */}
+      <section className="py-24 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Sıkça Sorulan Sorular</h2>
+            <p className="text-slate-600">Servis sürecimiz ve hizmetlerimiz hakkında merak ettiğiniz her şey.</p>
+          </div>
+
+          <div className="max-w-3xl mx-auto space-y-4">
+            {[
+              { q: "Servis ücreti ne kadar?", a: "Servis ücretlerimiz arıza tespiti, değişecek parça ve işçilik durumuna göre belirlenmektedir. Arıza tespiti sonrası size net fiyat sunulur ve onayınız olmadan işlem yapılmaz." },
+              { q: "Hangi markalara hizmet veriyorsunuz?", a: "Empero, İnoksan, Öztiryakiler, Ndustrio, Kayalar başta olmak üzere piyasadaki tüm endüstriyel mutfak ve soğutma markalarına yetkili servis kalitesinde hizmet veriyoruz." },
+              { q: "Hafta sonu açık mısınız?", a: "Evet, cumartesi günleri tam gün, pazar günleri ise nöbetçi ekiplerimizle acil servis hizmeti sunmaya devam ediyoruz." },
+              { q: "Parça garantisi var mı?", a: "Değişimini yaptığımız tüm orijinal yedek parçalar firmamız tarafından 1 yıl boyunca garanti kapsamındadır." },
+              { q: "İstanbul dışına servisiniz var mı?", a: "Şu an için sadece İstanbul genelinde (Anadolu ve Avrupa yakası tüm ilçeler) hizmet vermekteyiz." },
+              { q: "Aynı gün servis alabilir miyim?", a: "Çağrı merkezimizi aradığınızda, bölgenizdeki müsaitlik durumuna göre %90 oranında aynı gün içinde ekip yönlendirmesi yapabiliyoruz." }
+            ].map((item, i) => (
+              <details key={i} className="group bg-white rounded-xl border border-slate-200 overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                <summary className="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-slate-900 font-bold hover:bg-slate-50 transition-colors">
+                  <span className="text-lg">{item.q}</span>
+                  <span className="relative h-5 w-5 shrink-0">
+                    <ChevronRight className="absolute inset-0 h-5 w-5 opacity-100 group-open:opacity-0 transition-opacity text-slate-400" />
+                    <ChevronRight className="absolute inset-0 h-5 w-5 opacity-0 group-open:opacity-100 transition-opacity rotate-90 text-primary-600" />
+                  </span>
+                </summary>
+                <p className="mt-0 px-6 pb-6 text-slate-600 leading-relaxed border-t border-transparent group-open:border-slate-100 group-open:pt-4">
+                  {item.a}
+                </p>
+              </details>
+            ))}
+          </div>
+
+          {/* JSON-LD for FAQ */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  { "@type": "Question", "name": "Servis ücreti ne kadar?", "acceptedAnswer": { "@type": "Answer", "text": "Servis ücretlerimiz arıza tespiti, değişecek parça ve işçilik durumuna göre belirlenmektedir." } },
+                  { "@type": "Question", "name": "Hangi markalara hizmet veriyorsunuz?", "acceptedAnswer": { "@type": "Answer", "text": "Empero, İnoksan, Öztiryakiler, Ndustrio, Kayalar ve tüm endüstriyel markalar." } },
+                  { "@type": "Question", "name": "Hafta sonu açık mısınız?", "acceptedAnswer": { "@type": "Answer", "text": "Evet, 7/24 acil nöbetçi ekiplerimiz mevcuttur." } },
+                  { "@type": "Question", "name": "Parça garantisi var mı?", "acceptedAnswer": { "@type": "Answer", "text": "Değişen parçalar 1 yıl garantilidir." } }
+                ]
+              })
+            }}
+          />
+        </div>
+      </section>
+
+      {/* Final CTA Strip */}
+      <section className="bg-slate-900 py-12 border-t border-slate-800">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-2xl font-bold text-white mb-6">Profesyonel Mutfak Çözümleri İçin Beklemeyin</h2>
+          <div className="flex justify-center gap-4">
+            <a href="tel:05369319667" className="bg-primary-600 hover:bg-primary-500 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-primary-500/25 flex items-center gap-2">
+              <Phone className="h-5 w-5" /> 0536 931 96 67
+            </a>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
