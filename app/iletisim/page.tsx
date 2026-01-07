@@ -159,8 +159,7 @@ export default function ContactPage() {
                                 type="submit"
                                 className="w-full py-4 bg-primary-600 text-white font-bold rounded-xl hover:bg-slate-900 transition-all shadow-lg shadow-primary-500/20 flex items-center justify-center gap-2 group"
                             >
-                                <Send className="h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                                WhatsApp ile Gönder
+                                Servis Kaydı Aç
                             </button>
                             <p className="text-[10px] text-slate-400 text-center mt-4">
                                 * Gönder butonuna tıkladığınızda bilgileriniz otomatik olarak WhatsApp hattımıza aktarılacaktır.
