@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { brands, districts, services } from '@/lib/data';
+import { brands, districts, services, blogPosts } from '@/lib/data';
 
 export const dynamic = 'force-static';
 const BASE_URL = 'https://endustriyelbuzdolabitamircisi.com';
@@ -30,19 +30,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1,
         },
         {
-            url: `${BASE_URL}/hizmetlerimiz`,
+            url: `${BASE_URL}/hizmetlerimiz/`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.8,
         },
         {
-            url: `${BASE_URL}/markalar`,
+            url: `${BASE_URL}/markalar/`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.8,
         },
         {
-            url: `${BASE_URL}/iletisim`,
+            url: `${BASE_URL}/blog/`,
+            lastModified: new Date(),
+            changeFrequency: 'daily',
+            priority: 0.8,
+        },
+        {
+            url: `${BASE_URL}/iletisim/`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.5,
@@ -51,7 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Service pages
     const serviceRoutes = services.map((service) => ({
-        url: `${BASE_URL}/hizmetlerimiz/${service.slug}`,
+        url: `${BASE_URL}/hizmetlerimiz/${service.slug}/`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
         priority: 0.9,
@@ -59,21 +65,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Brand pages
     const brandRoutes = brands.map((brand) => ({
-        url: `${BASE_URL}/markalar/${brand.slug}`,
+        url: `${BASE_URL}/markalar/${brand.slug}/`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
         priority: 0.9,
     }));
 
+    // Blog pages
+    const blogRoutes = blogPosts.map((post) => ({
+        url: `${BASE_URL}/blog/${post.slug}/`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly' as const,
+        priority: 0.8,
+    }));
+
     // Brand + District Landing pages
     const landingRoutes = brands.flatMap((brand) =>
         districts.map((district) => ({
-            url: `${BASE_URL}/${brand.slug}-${slugify(district)}`,
+            url: `${BASE_URL}/${brand.slug}-${slugify(district)}/`,
             lastModified: new Date(),
             changeFrequency: 'monthly' as const,
             priority: 0.7,
         }))
     );
 
-    return [...routes, ...serviceRoutes, ...brandRoutes, ...landingRoutes];
+    return [...routes, ...serviceRoutes, ...brandRoutes, ...blogRoutes, ...landingRoutes];
 }
