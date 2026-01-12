@@ -45,8 +45,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (!combo) return { title: 'Sayfa Bulunamadı' };
 
     return {
-        title: `${combo.district} ${combo.brand.display} Servisi | Aynı Gün Tamir`,
-        description: `${combo.district} bölgesinde ${combo.brand.display} endüstriyel buzdolabı ve mutfak servisi. En yakın tamirci, acil servis, orijinal parça garantisi.`,
+        title: `${combo.district} ${combo.brand.display} Tamircisi | Acil Servis`,
+        description: `${combo.district} bölgesinde ${combo.brand.display} endüstriyel buzdolabı tamircisi ve teknik servisi. En yakın tamirci, acil servis, orijinal parça garantisi.`,
     };
 }
 
@@ -71,7 +71,7 @@ export default async function DistrictLandingPage({ params }: Props) {
                                 <MapPin className="h-4 w-4" /> {district} Bölgesi Aktif
                             </div>
                             <h1 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-                                {district} <span className="text-primary-600">{brand.display}</span> Servisi
+                                {district} <span className="text-primary-600">{brand.display}</span> Tamircisi
                             </h1>
                             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                                 {district} ilçesindeki işletmeniz için {brand.display} marka endüstriyel dolap ve mutfak ekipmanlarına aynı gün içinde servis sağlıyoruz.

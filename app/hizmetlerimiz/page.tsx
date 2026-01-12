@@ -5,8 +5,8 @@ import { Wrench, ArrowRight } from 'lucide-react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Hizmetlerimiz | Endüstriyel Soğutma Servisi',
-    description: 'İstanbul içi tüm endüstriyel buzdolabı ve mutfak ekipmanları tamir hizmetlerimiz.',
+    title: 'Hizmetlerimiz | Endüstriyel Buzdolabı Tamircisi',
+    description: 'İstanbul içi tüm endüstriyel buzdolabı tamiri ve sanayi tipi mutfak ekipmanları tamircisi hizmetlerimiz. 7/24 hızlı teknik servis.',
 };
 
 export default function ServicesPage() {

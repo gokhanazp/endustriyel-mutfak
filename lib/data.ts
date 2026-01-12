@@ -113,6 +113,24 @@ export const services = [
 
 export const blogPosts = [
     {
+        title: "İstanbul Endüstriyel Buzdolabı Tamircisi: Profesyonel Çözümler",
+        slug: "istanbul-endustriyel-buzdolabi-tamircisi",
+        excerpt: "İstanbul genelinde profesyonel endüstriyel buzdolabı tamircisi arıyorsanız, 7/24 hızlı ve garantili servis seçeneklerimizi keşfedin.",
+        date: "10 Ocak 2024",
+        readTime: "5 dk",
+        image: "/blog/buzdolabi-tamiri.jpg",
+        content: `
+            <h3>İstanbul'da Güvenilir Endüstriyel Buzdolabı Tamircisi Nasıl Bulunur?</h3>
+            <p>Endüstriyel mutfaklarda yaşanan en büyük kabuslardan biri soğutma sistemlerinin arızalanmasıdır. Bu durumda ihtiyacınız olan ilk şey hız ve uzmanlık sunan bir <strong>endüstriyel buzdolabı tamircisi</strong>'dir.</p>
+            
+            <h4>Neden Uzman Bir Tamirci Seçmelisiniz?</h4>
+            <p>Sanayi tipi dolaplar, ev tipi dolaplardan çok farklı çalışma prensiplerine sahiptir. Karmaşık elektronik kartlar, güçlü kompresörler ve gaz sistemleri sadece bu alanda deneyimli bir tamirci tarafından onarılmalıdır.</p>
+            
+            <h4>7/24 Acil Müdahale</h4>
+            <p>İşletmenizin gıda güvenliğini korumak için İstanbul'un her ilçesine yayılmış ekiplerimizle en yakınınızdaki tamirci olarak hizmet veriyoruz. Aynı gün teknik servis ve yerinde onarım fırsatıyla yanınızdayız.</p>
+        `
+    },
+    {
         title: "Endüstriyel Buzdolabı Neden Soğutmaz?",
         slug: "endustriyel-buzdolabi-neden-sogutmaz",
         excerpt: "Sanayi tipi dolabınız soğutmuyorsa panik yapmayın. İşte en sık karşılaşılan 5 neden ve çözüm yolları.",

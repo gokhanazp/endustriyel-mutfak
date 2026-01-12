@@ -31,7 +31,7 @@ export default function Home() {
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 tracking-tight leading-[1.1]">
                 Profesyonel <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-sky-300 to-primary-400 bg-300% animate-gradient">Soğutma Çözümleri</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-sky-300 to-primary-400 bg-300% animate-gradient">Buzdolabı Tamircisi</span>
               </h1>
 
               <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed font-light border-l-2 border-primary-500 pl-6">

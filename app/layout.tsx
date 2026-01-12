@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | İstanbul Endüstriyel Buzdolabı Tamircisi",
     default: "Endüstriyel Buzdolabı Tamircisi - 7/24 Profesyonel Servis",
   },
-  description: "İstanbul geneli endüstriyel buzdolabı tamiri, bakımı ve teknik servisi.",
+  description: "İstanbul genelinde en yakın endüstriyel buzdolabı tamircisi olarak 7/24 profesyonel tamir, bakım ve teknik servis hizmeti sunuyoruz. Orijinal parça garantili.",
   metadataBase: new URL("https://endustriyelbuzdolabitamircisi.com"),
   robots: { index: false, follow: false }, // Yapım aşamasında indeksleme kapalı
 };

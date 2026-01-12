@@ -5,8 +5,8 @@ import { ArrowRight, Star } from 'lucide-react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Markalar | Endüstriyel Buzdolabı Servisi',
-    description: 'Empero, İnoksan, Öztiryakiler ve diğer tüm markalar için yetkili servis kalitesinde hizmet.',
+    title: 'Markalar | Endüstriyel Buzdolabı Tamircisi',
+    description: 'Empero, İnoksan, Öztiryakiler ve diğer tüm markalar için profesyonel endüstriyel buzdolabı tamircisi ve servis hizmetleri.',
 };
 
 
