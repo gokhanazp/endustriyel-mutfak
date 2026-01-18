@@ -6,6 +6,7 @@ import { Phone, Menu, MapPin, Clock, X, ChevronRight, Mail, ChevronDown, Snowfla
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { services, brands } from '@/lib/data';
+import { trackEvent } from './GoogleAnalytics';
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -177,6 +178,7 @@ export default function Header() {
                         <a
                             href="tel:05369319667"
                             className="hidden md:flex flex-col items-end mr-2 group"
+                            onClick={() => trackEvent('phone_click', 'Conversion', 'Header Phone Number')}
                         >
                             <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Hemen Arayın</span>
                             <span className="text-lg font-bold text-slate-900 group-hover:text-primary-600 transition-colors">0536 931 96 67</span>
@@ -184,6 +186,7 @@ export default function Header() {
 
                         <a
                             href="tel:05369319667"
+                            onClick={() => trackEvent('phone_click', 'Conversion', 'Header Call Button')}
                             className="hidden md:flex items-center gap-2 bg-slate-900 hover:bg-primary-600 text-white px-6 py-2.5 rounded-full font-bold transition-all shadow-lg shadow-slate-900/20 hover:shadow-primary-600/30 transform hover:-translate-y-0.5"
                         >
                             <Phone className="h-4 w-4" />
@@ -238,7 +241,9 @@ export default function Header() {
                     </nav>
 
                     <div className="mt-8">
-                        <a href="tel:05369319667" className="w-full bg-primary-600 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary-600/30">
+                        <a href="tel:05369319667"
+                            onClick={() => trackEvent('phone_click', 'Conversion', 'Mobile Menu Call Button')}
+                            className="w-full bg-primary-600 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary-600/30">
                             <Phone className="h-5 w-5" />
                             Hemen Ara: 0536 931 96 67
                         </a>

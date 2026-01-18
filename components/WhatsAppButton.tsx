@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { trackEvent } from './GoogleAnalytics';
 
 export default function WhatsAppButton() {
     return (
@@ -7,6 +8,7 @@ export default function WhatsAppButton() {
             href="https://wa.me/905369319667" // Replace with actual number if different
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent('whatsapp_click', 'Conversion', 'Floating WhatsApp Button')}
             className="fixed bottom-6 right-6 z-50 flex items-center justify-center bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full p-4 shadow-xl transition-all duration-300 hover:scale-110 group"
             aria-label="WhatsApp ile iletişime geçin"
         >
