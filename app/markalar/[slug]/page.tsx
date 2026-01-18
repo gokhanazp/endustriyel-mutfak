@@ -2,7 +2,7 @@
 import { brands, districts } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { Phone, CheckCircle, ShieldCheck, ArrowRight, MapPin } from 'lucide-react';
+import { Phone, CheckCircle, ShieldCheck } from 'lucide-react';
 import type { Metadata } from 'next';
 
 

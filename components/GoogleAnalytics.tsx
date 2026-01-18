@@ -5,13 +5,20 @@ import { useEffect, Suspense } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
 
+declare global {
+    interface Window {
+        gtag: (...args: any[]) => void;
+        dataLayer: any[];
+    }
+}
+
 function AnalyticsTracker({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_ID: string }) {
     const pathname = usePathname();
     const searchParams = useSearchParams();
 
     useEffect(() => {
-        if (typeof window !== "undefined" && (window as any).gtag) {
-            (window as any).gtag("config", GA_MEASUREMENT_ID, {
+        if (typeof window !== "undefined" && window.gtag) {
+            window.gtag("config", GA_MEASUREMENT_ID, {
                 page_path: pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : ""),
             });
         }
@@ -50,8 +57,8 @@ export default function GoogleAnalytics({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_
 
 // Event tracking helper
 export const trackEvent = (action: string, category: string, label: string, value?: number) => {
-    if (typeof window !== "undefined" && (window as any).gtag) {
-        (window as any).gtag("event", action, {
+    if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("event", action, {
             event_category: category,
             event_label: label,
             value: value,

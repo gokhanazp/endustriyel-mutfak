@@ -26,7 +26,7 @@ export default function Home() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-primary-500"></span>
                 </span>
-                <span className="font-bold tracking-wide text-sm">İstanbul'un En Kapsamlı Servis Ağı</span>
+                <span className="font-bold tracking-wide text-sm">İstanbul&apos;un En Kapsamlı Servis Ağı</span>
               </div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 tracking-tight leading-[1.1]">
@@ -285,7 +285,7 @@ export default function Home() {
               <span className="text-primary-600 font-bold tracking-wider uppercase text-sm mb-2 block">7/24 Kesintisiz Hizmet</span>
               <h2 className="text-4xl font-bold text-slate-900 mb-6">En Yakın Teknik Servis Ekibimiz Sadece Bir Telefon Uzağınızda</h2>
               <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-                Endüstriyel cihaz arızaları zaman tanımaz. Bu yüzden İstanbul'un her iki yakasında, 39 ilçede konuşlanmış mobil ekiplerimizle çağrınıza en hızlı yanıtı veriyoruz.
+                Endüstriyel cihaz arızaları zaman tanımaz. Bu yüzden İstanbul&apos;un her iki yakasında, 39 ilçede konuşlanmış mobil ekiplerimizle çağrınıza en hızlı yanıtı veriyoruz.
               </p>
 
               <div className="space-y-4 mb-10">

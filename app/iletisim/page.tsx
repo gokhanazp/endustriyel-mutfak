@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Phone, Mail, Clock, Send } from 'lucide-react';
+import { Phone, Mail, Clock } from 'lucide-react';
 
 export default function ContactPage() {
     const [formData, setFormData] = useState({

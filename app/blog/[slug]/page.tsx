@@ -2,7 +2,7 @@
 import { blogPosts, services } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { Calendar, Clock, ArrowLeft, Share2, Phone, CheckCircle } from 'lucide-react';
+import { Calendar, Clock, ArrowLeft, Phone, CheckCircle } from 'lucide-react';
 import { Metadata } from 'next';
 
 interface Props {

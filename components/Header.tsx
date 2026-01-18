@@ -2,7 +2,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Phone, Menu, MapPin, Clock, X, ChevronRight, Mail, ChevronDown, Snowflake } from 'lucide-react';
+import { Phone, Menu, MapPin, Clock, X, ChevronDown, Snowflake } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { services, brands } from '@/lib/data';
@@ -53,7 +53,7 @@ export default function Header() {
                     <div className="flex gap-6">
                         <div className="flex items-center gap-2">
                             <MapPin className="h-3.5 w-3.5 text-primary-500" />
-                            <span>İstanbul'un Tüm İlçelerinde Hizmetinizdeyiz</span>
+                            <span>İstanbul&apos;un Tüm İlçelerinde Hizmetinizdeyiz</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <Clock className="h-3.5 w-3.5 text-primary-500" />

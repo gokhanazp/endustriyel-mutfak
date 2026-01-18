@@ -70,7 +70,7 @@ export default async function ServicePage({ params }: Props) {
                                 {service.title}
                             </h1>
                             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl border-l-4 border-primary-500 pl-6">
-                                {service.shortDesc} İstanbul'un her noktasına 7/24 acil servis ve garantili onarım hizmeti.
+                                {service.shortDesc} İstanbul&apos;un her noktasına 7/24 acil servis ve garantili onarım hizmeti.
                             </p>
                         </div>
                         {/* Hero Stats/Trust Badge */}
@@ -162,7 +162,7 @@ export default async function ServicePage({ params }: Props) {
                             </div>
 
                             <div className="mt-8 bg-slate-900 rounded-2xl p-6 text-white text-center">
-                                <p className="mb-4 font-medium italic">"Eğer yukarıdaki sorunlardan birini yaşıyorsanız, cihazınızı fişten çekip hemen bizi arayın. Daha büyük arızaların önüne geçmek için profesyonel destek şarttır."</p>
+                                <p className="mb-4 font-medium italic">&quot;Eğer yukarıdaki sorunlardan birini yaşıyorsanız, cihazınızı fişten çekip hemen bizi arayın. Daha büyük arızaların önüne geçmek için profesyonel destek şarttır.&quot;</p>
                                 <a href="tel:05369319667" className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-500 text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg hover:shadow-primary-500/25">
                                     <Phone className="h-5 w-5" /> Acil Servis: 0536 931 96 67
                                 </a>
